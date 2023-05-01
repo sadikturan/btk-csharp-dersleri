@@ -1,1 +1,2 @@
-** Proje indirip "dotnet build" komutu ile projeyi derleyip bin ve obj klasörlerinin projeye tekrar yüklenmesini sağlayabilirsiniz.
+- Projenizi "dotnet run" diyerek çalıştırabilirsiniz.
+- Eğer hata alırsanız projedeki "bin" ve "obj" klasörünü silerek "dotnet build" komutuyla projenizi derleyiniz.
