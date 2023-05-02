@@ -1,14 +1,19 @@
-## Neden Değişken Kullanırız?
+## Değişken Tanımlama
+C# ile değişken tanımlamak için **var** komutu kullanılır.
 
-  Uygulama boyunca kullandığımız verileri tek bir yerden yönetme ihtiyacı dıyarız.
+Değişken isimleri boşluk karakteri içermez.
 
-    var kdvOrani = 1.18;
-    var urunA = 5000;    
-    var urunB = 6000;    
-    var urunC = 7000;    
-    var urunD = 5500;     
-    
-    Console.WriteLine(urunA * kdvOrani); // urunA    
-    Console.WriteLine(urunB * kdvOrani); // urunB    
-    Console.WriteLine(urunC * kdvOrani); // urunC    
-    Console.WriteLine(urunD * kdvOrani); // urunD
+    var urun adi = "Samsung S23";   // yanlış
+    var urun_adi = "Samsung S23";   // doğru
+
+Değişkenler sayı ile başlayamaz.
+
+    var 2sayi = 30;  // yanlış
+    var sayi2 = 50;  // doğru
+
+Büyük-küçük harf duyarlılığı vardır. Aşağıdaki değişkenler belleğin farklı adreslerinde tutulan farklı değişkenlerdir.
+
+    var fiyat = 1000.25;    
+    var Fiyat = 1000.25; 
+
+ Türkçe karakter kullanmamaya özen göstermeliyiz.

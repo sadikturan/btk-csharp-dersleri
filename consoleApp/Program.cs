@@ -1,10 +1,25 @@
-﻿var kdvOrani = 1.18;
-var urunA = 5000;
-var urunB = 6000;
-var urunC = 7000;
-var urunD = 5500;
+﻿var sayi = 20;
+// var urunAdi = "Samsung S23";
+var urun_adi = "Samsung S23";
 
-Console.WriteLine(urunA * kdvOrani);    // urunA
-Console.WriteLine(urunB * kdvOrani);    // urunB
-Console.WriteLine(urunC * kdvOrani);    // urunC
-Console.WriteLine(urunD * kdvOrani);    // urunD
+// Boşluk içermez.
+// Sayı ile başlayamaz.
+var sayi2 = 30;
+var sayi3 = 50;
+
+var fiyat = 1000.25;
+var Fiyat = 1000.25;
+
+// Büyük-küçük harf duyarlılığı var.
+
+var satistaMi = "evet";
+var ogrenciNo = "1025";
+
+Console.WriteLine(sayi);
+Console.WriteLine(urun_adi);
+Console.WriteLine(sayi2);
+Console.WriteLine(sayi3);
+Console.WriteLine(fiyat);
+Console.WriteLine(Fiyat);
+Console.WriteLine(satistaMi);
+Console.WriteLine(ogrenciNo);
