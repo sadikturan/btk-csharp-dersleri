@@ -1,2 +1,8 @@
-- Projenizi "dotnet run" diyerek çalıştırabilirsiniz.
-- Eğer hata alırsanız projedeki "bin" ve "obj" klasörünü silerek "dotnet build" komutuyla projenizi derleyiniz.
+**Değişken Nedir?
+Değişken; uygulamaların çalışma anında ihtiyaç duyduğu verileri geçici olarak sakladıkları bilgilere denir.
+- Değişkenler geçici bellekte saklanır.
+- Uygulama sonlandığında bellekteki veriler silinir.
+- Bellekte mümkün olduğunca az veri saklanmalıdır.
+- Değişkenlerin veri tipleri vardır.
+- Değişkenler sakladıkları veriye göre bellekte farklı boyutlarda yer tutarlar.
+
