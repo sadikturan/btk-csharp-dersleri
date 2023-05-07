@@ -1,20 +1,14 @@
 ﻿/*
-    C# Veri Tipleri
-
-    Value Types: 
-        Tam sayı:            byte, short, int, long
-        Ondalıklı sayılar:   float, double, decimal
-        Diğer Veri Tipleri:  char, boolean, struct
-
-    Reference Types:
-        String, Class, Array, Interface
-
+    Veri Tipi Dönüşümüne Neden İhtiyaç Duyarız?
 */
 
-int sayi = 200;
-decimal kdvOrani = 1.18m;
-char cinsiyet = 'K';
-string cinsiyet2 = "Kadın";
-string urunAdi = "Samsung S23";
-var satisDurumu = false;
- 
+
+Console.Write("1.sayı: ");
+var sayi1 = Console.ReadLine();
+
+Console.Write("2.sayı: ");
+var sayi2 = Console.ReadLine();
+
+var toplam = sayi1 + sayi2; // 1020 // SadıkTURAN
+
+Console.Write(toplam);
