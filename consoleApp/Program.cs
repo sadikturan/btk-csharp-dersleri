@@ -1,14 +1,33 @@
 ﻿/*
-    Veri Tipi Dönüşümüne Neden İhtiyaç Duyarız?
+    Veri Tipi Dönüşümü
+    // implicit casting => bilinçsiz tür dönüşümü
+    // explicit casting => bilinçli tür dönüşümü
 */
 
+int a = 10;
+long b = a;
 
-Console.Write("1.sayı: ");
-var sayi1 = Console.ReadLine();
+long d = 20;
+int e = (int)d;
 
-Console.Write("2.sayı: ");
-var sayi2 = Console.ReadLine();
+double f = 20.5;
+float g = (float)f;
 
-var toplam = sayi1 + sayi2; // 1020 // SadıkTURAN
+double h = 10.5;
+int i = (int)h;
 
-Console.Write(toplam);
+Console.WriteLine(i);
+
+int x = 10;
+string z = x.ToString();
+
+
+// Console.Write("1.sayı: ");
+// var sayi1 = Convert.ToInt32(Console.ReadLine());     // string to int
+
+// Console.Write("2.sayı: ");
+// var sayi2 = Convert.ToInt32(Console.ReadLine());
+
+// var toplam = sayi1 + sayi2; 
+
+// Console.WriteLine(toplam);
