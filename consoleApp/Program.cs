@@ -1,33 +1,20 @@
 ﻿/*
-    Veri Tipi Dönüşümü
-    // implicit casting => bilinçsiz tür dönüşümü
-    // explicit casting => bilinçli tür dönüşümü
+    Strings: Karakter dizileri - reference => null
 */
 
-int a = 10;
-long b = a;
+Console.Write("adı: ");
+var ad = Console.ReadLine();
 
-long d = 20;
-int e = (int)d;
+Console.Write("soyad: ");
+var soyad = Console.ReadLine();
 
-double f = 20.5;
-float g = (float)f;
+Console.Write("yaş: ");
+var yas = Console.ReadLine();
 
-double h = 10.5;
-int i = (int)h;
+// string concat
+// string mesaj = ad +" "+ soyad + " isimli kişi "+ yas + " yaşındadır.";
 
-Console.WriteLine(i);
+// string interpolation
+string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır.";
 
-int x = 10;
-string z = x.ToString();
-
-
-// Console.Write("1.sayı: ");
-// var sayi1 = Convert.ToInt32(Console.ReadLine());     // string to int
-
-// Console.Write("2.sayı: ");
-// var sayi2 = Convert.ToInt32(Console.ReadLine());
-
-// var toplam = sayi1 + sayi2; 
-
-// Console.WriteLine(toplam);
+Console.WriteLine(mesaj);
