@@ -1,20 +1,19 @@
 ﻿/*
-    Strings: Karakter dizileri - reference => null
+    String Methods
 */
 
-Console.Write("adı: ");
-var ad = Console.ReadLine();
+string mesaj = "Ahmet Turan isimli kişi 20 yaşındadır.";
 
-Console.Write("soyad: ");
-var soyad = Console.ReadLine();
+// var sonuc = mesaj.Length;
+// var sonuc = mesaj.ToLower();
+// var sonuc = mesaj.ToUpper();
+// var sonuc = mesaj.Trim();
+// var sonuc = mesaj.Split(" ")[0];
+// var sonuc = mesaj[0];
+// var sonuc = mesaj.StartsWith("B");
+// var sonuc = mesaj.EndsWith(".");
+// var sonuc = mesaj.Contains("Ali");
+// var sonuc = mesaj.IndexOf("abc");
+var sonuc = mesaj.Substring(6, 5);
 
-Console.Write("yaş: ");
-var yas = Console.ReadLine();
-
-// string concat
-// string mesaj = ad +" "+ soyad + " isimli kişi "+ yas + " yaşındadır.";
-
-// string interpolation
-string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır.";
-
-Console.WriteLine(mesaj);
+Console.WriteLine(sonuc);
