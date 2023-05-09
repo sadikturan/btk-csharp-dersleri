@@ -1,20 +1,30 @@
 /*
-    Strings: Karakter dizileri - reference => null
+    String Uygulamaları
 */
 
-Console.Write("adı: ");
-var ad = Console.ReadLine();
+string kursAdi = ".NET 7 ile C# Programlama Dili";
 
-Console.Write("soyad: ");
-var soyad = Console.ReadLine();
+// 1- Kaç karaktere sahiptir ?
+// 2- Hepsini küçük harf yapınız.
+// 3- '.' ile mi başlamaktadır?
+// 4- C# bilgisi hangi konumda bulunmaktadır?
+// 5- String 'C#' bilgisini içeriyor mu?
+// 6- 'Dili' kelimesi yerine 'Dersleri' yazınız. (replace)
+ 
+ var karakterSayisi = kursAdi.Length;
+ Console.WriteLine(karakterSayisi); // 30
 
-Console.Write("yaş: ");
-var yas = Console.ReadLine();
+ var kucukHarf = kursAdi.ToLower();
+ Console.WriteLine(kucukHarf);
 
-// string concat
-// string mesaj = ad +" "+ soyad + " isimli kişi "+ yas + " yaşındadır.";
+ var nokta = kursAdi.StartsWith('.');
+ Console.WriteLine("string . ile başlıyor: " + nokta);
 
-// string interpolation
-string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır.";
+ var konum = kursAdi.IndexOf("C#");
+ Console.WriteLine("konum " + konum);
 
-Console.WriteLine(mesaj);
+ var iceriyormu = kursAdi.Contains("C#");
+ Console.WriteLine("C# içeriyor mu: " + iceriyormu);
+
+ var guncellenenString = kursAdi.Replace("Dili","Dersleri");
+Console.WriteLine(guncellenenString);
