@@ -1,25 +1,28 @@
-﻿/*
-    DateTime
-*/
+﻿// Arrays (Diziler)
 
-var simdi = DateTime.Now;
+var kursAdi = ".net 7 ile c# programlama dersleri".Split(' ');
 
-Console.WriteLine(simdi);
-Console.WriteLine(simdi.Year);
-Console.WriteLine(simdi.Month);
-Console.WriteLine(simdi.Day);
-Console.WriteLine(simdi.DayOfWeek);
-Console.WriteLine(simdi.Hour);
-Console.WriteLine(simdi.Minute);
-Console.WriteLine(simdi.Second);
+// string[] isimler = new string[5];
 
-DateTime dt = new DateTime(2022, 6, 10, 14, 30, 45);
-DateTime dt2 = dt.AddYears(1);
-DateTime dt3 = dt.AddHours(2);
+// isimler[0] = "Ahmet";
+// isimler[1] = "Ali";
+// isimler[2] = "Canan";
+// isimler[3] = "Çınar";
+// isimler[4] = "Esra";
 
-Console.WriteLine(dt2.Year);
-Console.WriteLine(dt3.Hour);
+string[] isimler = {"Ahmet","Ali","Canan","Çınar","Esra"};
 
-var fark = simdi - dt;
-Console.WriteLine(fark.TotalDays);
-Console.WriteLine(fark.TotalMinutes);
+// int[] numaralar = new int[5];
+
+// numaralar[0] = 100;
+// numaralar[1] = 200;
+// numaralar[2] = 300;
+// numaralar[3] = 400;
+// numaralar[4] = 500;
+
+int[] numaralar = {100,200,300,400,500};
+
+Console.WriteLine($"{numaralar[0]} numaralı öğrenin adı {isimler[0]}");
+Console.WriteLine($"{numaralar[1]} numaralı öğrenin adı {isimler[1]}");
+Console.WriteLine($"{numaralar[2]} numaralı öğrenin adı {isimler[2]}");
+
