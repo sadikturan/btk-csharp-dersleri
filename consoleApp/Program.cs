@@ -1,28 +1,23 @@
-﻿// Arrays (Diziler)
+﻿// Dizi Metotları (Array Methods)
 
-var kursAdi = ".net 7 ile c# programlama dersleri".Split(' ');
+string[] sehirler = {"zonguldak","rize","kocaeli"};
+int[] plakalar = {67,53,41};
 
-// string[] isimler = new string[5];
+// sehirler[0] = "sakarya";
+// sehirler.SetValue("sakarya",1);
 
-// isimler[0] = "Ahmet";
-// isimler[1] = "Ali";
-// isimler[2] = "Canan";
-// isimler[3] = "Çınar";
-// isimler[4] = "Esra";
+Console.WriteLine(sehirler.GetValue(1));
+Console.WriteLine(sehirler.Length);
+Console.WriteLine(Array.IndexOf(sehirler, "rize"));
 
-string[] isimler = {"Ahmet","Ali","Canan","Çınar","Esra"};
+Array.Sort(sehirler);
+Array.Sort(plakalar);
 
-// int[] numaralar = new int[5];
+Array.Reverse(plakalar);
 
-// numaralar[0] = 100;
-// numaralar[1] = 200;
-// numaralar[2] = 300;
-// numaralar[3] = 400;
-// numaralar[4] = 500;
+Array.Clear(sehirler);
+Array.Clear(plakalar, 0, 1);
 
-int[] numaralar = {100,200,300,400,500};
-
-Console.WriteLine($"{numaralar[0]} numaralı öğrenin adı {isimler[0]}");
-Console.WriteLine($"{numaralar[1]} numaralı öğrenin adı {isimler[1]}");
-Console.WriteLine($"{numaralar[2]} numaralı öğrenin adı {isimler[2]}");
-
+Console.WriteLine(plakalar.GetValue(0));
+Console.WriteLine(plakalar.GetValue(1));
+Console.WriteLine(plakalar.GetValue(2));
