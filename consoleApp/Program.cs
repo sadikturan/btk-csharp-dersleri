@@ -1,46 +1,33 @@
-﻿// Dizi Uygulama
+﻿// Çok Boyutlu Diziler
 
-// ogrenciler ve notlar isminde 2 tane dizi oluşturunuz ve dizi elemanlarını kullanıcıdan aldığınız değerlerle doldurunuz. (3 öğrenci)
+// Ali   => 50, 60, 70
+// Ahmet => 60, 80, 90
+// Canan => 50, 70, 30
 
-// ogrenciler dizisi kaç elemanlıdır, yazdırınız.
-// ilk 2 öğrencinin ad ve not bilgisini yazdırınız.
-// tüm öğrencilerin not ortalaması nedir? 
+// Her öğrencinin not ortalamasını hesaplayınız.
 
-var ogrenciler = new string[3];
-var notlar = new int[3];
+string[] ogrenciler = {"Ali","Ahmet","Canan"};
+int[,] notlar = new int[3,3];
 
-Console.Write("1.öğrenci adı: ");
-ogrenciler[0] = Console.ReadLine() ?? "";
+// ali
+notlar[0,0] = 50;
+notlar[0,1] = 60;
+notlar[0,2] = 70;
 
-Console.Write("1.öğrenci notu: ");
-notlar[0] = Convert.ToInt32(Console.ReadLine());
+// ahmet
+notlar[1,0] = 60;
+notlar[1,1] = 80;
+notlar[1,2] = 90;
 
-Console.Write("2.öğrenci adı: ");
-ogrenciler[1] = Console.ReadLine() ?? "";
+// canan
+notlar[2,0] = 50;
+notlar[2,1] = 70;
+notlar[2,2] = 30;
 
-Console.Write("2.öğrenci notu: ");
-notlar[1] = Convert.ToInt32(Console.ReadLine());
+var ortalama_1 = (notlar[0,0] + notlar[0,1] + notlar[0,2]) / 3;
+var ortalama_2 = (notlar[1,0] + notlar[1,1] + notlar[1,2]) / 3;
+var ortalama_3 = (notlar[2,0] + notlar[2,1] + notlar[2,2]) / 3;
 
-Console.Write("3.öğrenci adı: ");
-ogrenciler[2] = Console.ReadLine() ?? "";
-
-Console.Write("1.öğrenci notu: ");
-notlar[2] = Convert.ToInt32(Console.ReadLine());
-
-foreach(var ogrenci in ogrenciler[..2]) {
-    Console.WriteLine(ogrenci);
-}
-
-foreach(var not in notlar[..2]) {
-    Console.WriteLine(not);
-}
-
-Console.WriteLine("öğrenciler dizisinin eleman sayısı: " + ogrenciler.Length);
-
-var not1 = notlar[0];
-var not2 = notlar[1];
-var not3 = notlar[2];
-
-var ortalama = (not1 + not2 + not3) / 3;
-
-Console.WriteLine("öğrencilerin not ortalaması: " + ortalama);
+Console.WriteLine($"{ogrenciler[0]} isimli öğrencinin not ortalaması: {ortalama_1}");
+Console.WriteLine($"{ogrenciler[1]} isimli öğrencinin not ortalaması: {ortalama_2}");
+Console.WriteLine($"{ogrenciler[2]} isimli öğrencinin not ortalaması: {ortalama_3}");
