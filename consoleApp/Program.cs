@@ -1,23 +1,17 @@
-﻿// Dizi Metotları (Array Methods)
+﻿// Array Slicing
 
-string[] sehirler = {"zonguldak","rize","kocaeli"};
-int[] plakalar = {67,53,41};
+string[] sehirler = {"zonguldak","rize","kocaeli","istanbul","ankara","çanakkale"};
 
-// sehirler[0] = "sakarya";
-// sehirler.SetValue("sakarya",1);
+// foreach(var sehir in sehirler[0..3]) {
+//     Console.WriteLine(sehir);
+// }
 
-Console.WriteLine(sehirler.GetValue(1));
-Console.WriteLine(sehirler.Length);
-Console.WriteLine(Array.IndexOf(sehirler, "rize"));
+foreach(var sehir in sehirler[2..]) {
+    Console.WriteLine(sehir);
+}
 
-Array.Sort(sehirler);
-Array.Sort(plakalar);
+string il = "Kocaeli";
 
-Array.Reverse(plakalar);
+Console.WriteLine(il[..5]);
 
-Array.Clear(sehirler);
-Array.Clear(plakalar, 0, 1);
 
-Console.WriteLine(plakalar.GetValue(0));
-Console.WriteLine(plakalar.GetValue(1));
-Console.WriteLine(plakalar.GetValue(2));
