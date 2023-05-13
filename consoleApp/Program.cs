@@ -1,10 +1,16 @@
-﻿int[] x = {10,20};
-int[] y = x;
+﻿// Aritmetik Operatörler
 
-Console.WriteLine(x[0]);    // 10
-Console.WriteLine(y[0]);    // 10
+var a = 10;
+var b = 3;
+var c = 2;
 
-x[0] = 20;
+// var sonuc = a + b;
+// var sonuc = a - b;
+// var sonuc = a * b;
+// var sonuc = (float)a / (float)b;
+// var sonuc = (a + b) * c;
+// var sonuc = a % b; // 10 % 3
+// var sonuc = 14 % 2;
+var sonuc = ++a;
 
-Console.WriteLine(x[0]);    // 20
-Console.WriteLine(y[0]);    // 20
+Console.WriteLine(sonuc);
