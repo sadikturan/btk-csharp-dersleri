@@ -1,33 +1,27 @@
-﻿// Aritmetik Operatör Uygulamaları
+﻿// Atama Operatörleri
 
-// a = 10, b = 5, c = 20 ise c - a farkının b katı kaçtır?
+var a = 5;
+var b = 10;
 
-// int? a = 50; int b = 20; ise a + b değerini hesaplayınız. (eğer a null ise sonuç nedir?)
+a += b; // a = a + b;
+a += 5; // a = a + 5;
+a -= b; // a = a - b;
+a *= b; // a = a * b;
+a /= b; // a = a / b;
+a %= b; // a = a / b;
 
-// a=10 b=20 ise a=b--; atamasından sonra a ve b değerleri ne olur?
+// Math
+double sonuc;
 
-// Klavyeden girilen bir sayının tek / çift kontrolünü yapınız.
+sonuc = Math.Pow(2,3);
+sonuc = Math.Sqrt(25);
+sonuc = Math.Abs(-10);
+sonuc = Math.Round(4.5);
+sonuc = Math.Round(4.6);
+sonuc = Math.Round(4.4);
+sonuc = Math.Ceiling(4.4);
+sonuc = Math.Floor(4.6);
+sonuc = Math.Max(10,20);
+sonuc = Math.Min(10,20);
 
-// int a = 10;
-// int b = 5;
-// int c = 20;
-// var sonuc = (c - a) * b;
-
-// int? a = null;
-// int b = 20;
-
-// var sonuc = (a ?? 0) + b;
-// Console.WriteLine(sonuc);
-
-// int a = 10;
-// int b = 20;
-// a = b--;
-
-// Console.WriteLine(a);
-// Console.WriteLine(b);
-
-Console.Write("sayı: ");
-int sayi = int.Parse(Console.ReadLine() ?? "0");
-var sonuc = sayi % 2;
-
-Console.WriteLine(sonuc); // 1 ise satı tek, 0 ise sayı çift
+Console.WriteLine(sonuc);
