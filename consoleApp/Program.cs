@@ -1,27 +1,20 @@
-﻿// Atama Operatörleri
+﻿// Karşılaştırma Operatörleri
 
-var a = 5;
-var b = 10;
+int a = 5, b = 5, c = 10, d = 3;
+string username = "sadikturan";
+string password = "1234";
 
-a += b; // a = a + b;
-a += 5; // a = a + 5;
-a -= b; // a = a - b;
-a *= b; // a = a * b;
-a /= b; // a = a / b;
-a %= b; // a = a / b;
+var sonuc = (a == b); // true
+sonuc = (c == d);
+sonuc = (username == "sadikturan"); // true
+sonuc = (password == "12345");      // false
 
-// Math
-double sonuc;
+sonuc = (a != b);
+sonuc = (a > c);
+sonuc = (a < c);
+sonuc = (a >= b);
 
-sonuc = Math.Pow(2,3);
-sonuc = Math.Sqrt(25);
-sonuc = Math.Abs(-10);
-sonuc = Math.Round(4.5);
-sonuc = Math.Round(4.6);
-sonuc = Math.Round(4.4);
-sonuc = Math.Ceiling(4.4);
-sonuc = Math.Floor(4.6);
-sonuc = Math.Max(10,20);
-sonuc = Math.Min(10,20);
+// ternary
+var sonuc2 = (a > b) ? "a büyük": (a == b) ? "a b eşit": "b büyük";
 
-Console.WriteLine(sonuc);
+Console.WriteLine(sonuc2);
