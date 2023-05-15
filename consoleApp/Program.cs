@@ -1,20 +1,23 @@
-﻿// Karşılaştırma Operatörleri
+﻿// Karşılaştırma Operatör Uygulamaları
 
-int a = 5, b = 5, c = 10, d = 3;
-string username = "sadikturan";
-string password = "1234";
+// Klavyeden girilen yaş bilgisine göre oy kullanabilme durumunu inceleyiniz.
 
-var sonuc = (a == b); // true
-sonuc = (c == d);
-sonuc = (username == "sadikturan"); // true
-sonuc = (password == "12345");      // false
+// Console.Write("yaşınız: ");
+// var yas = Convert.ToInt32(Console.ReadLine());
+// var sonuc = (yas >= 18) ? "ehliyet alabilirsiniz.":"ehliyet için yaşınız tutmuyor.";
+// Console.WriteLine(sonuc);
 
-sonuc = (a != b);
-sonuc = (a > c);
-sonuc = (a < c);
-sonuc = (a >= b);
 
-// ternary
-var sonuc2 = (a > b) ? "a büyük": (a == b) ? "a b eşit": "b büyük";
+// Girilen bir sayının işaretini kontrol ediniz.
 
-Console.WriteLine(sonuc2);
+// Console.Write("sayı: ");
+// var sayi = Convert.ToInt32(Console.ReadLine());
+// var sonuc = (sayi > 0) ? "sayı pozitif":"sayı negatif";
+// Console.WriteLine(sonuc);
+
+// Girilen bir sayının tek/çift durumunu kontrol ediniz.
+
+Console.Write("sayı: ");
+var sayi = Convert.ToInt32(Console.ReadLine());
+var sonuc = (sayi % 2 == 1) ? "sayı tek": "sayı çift";
+Console.WriteLine(sonuc);
