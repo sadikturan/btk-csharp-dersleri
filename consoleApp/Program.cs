@@ -1,11 +1,20 @@
-﻿// Random
+﻿// if/else bloğu
 
-string[] takimlar = {"Beşiktaş","Galatasaray","Fenerbahçe","Trabzon"};
+string username = "sadikturan";
+string password = "12345";
 
-var rnd = new Random();
+if (username == "sadikturan") {
 
-int sayi = rnd.Next(0,4);
+    if(password == "123456") {
+        Console.WriteLine("Merhaba BTK AKADEMİ");
+    } else {
+        Console.WriteLine("parola yanlış");
+    }
 
-Console.WriteLine(sayi);
+}
+else {
+    Console.WriteLine("username yanlış");
+}
 
-Console.WriteLine(takimlar[sayi]);
+
+
