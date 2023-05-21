@@ -1,7 +1,10 @@
-﻿int sayi = -9;
+﻿// For
 
-var sonuc = (sayi % 2 == 0) ? 
-                (sayi > 0) ? "sayı pozitif çift": "sayı negatif çift": 
-                (sayi > 0) ? "sayı pozitif tek": "sayı negatif tek";
+// kontrol değişkeni
+// kontrol
+// güncellenmesi
 
-Console.WriteLine(sonuc);
+for(var i = 1; i <= 100; i++) {
+    Console.WriteLine("MERHABA BTK AKADEMİ");
+}
+
