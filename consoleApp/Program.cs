@@ -1,28 +1,19 @@
-﻿// do-while döngüsü
+﻿// forEach
 
-// int i = 1;
+string ad = "Ahmet";
 
-// do {
-//     Console.WriteLine(i);
-//     i++;
-// } while(false);
+// for(var i = 0; i < ad.Length; i++) {
+//     Console.WriteLine(ad[i]);
+// }
 
-Console.Write("adet: ");
-int adet = Convert.ToInt32(Console.ReadLine());
+foreach(var harf in ad) {
+    Console.WriteLine(harf);
+}
 
-string[] urunler = new string[adet];
+int[] sayilar = {10,20,40,45,50};
 
-int i = 0;
-
-do {
-    Console.Write("ürün adı: ");
-    urunler[i] = Console.ReadLine() ?? "";
-
-    i++;
-} while(adet != i);
-
-Console.WriteLine("ürünler listeleniyor...");
-
-for(var a = 0; a < urunler.Length; a++) {
-    Console.WriteLine(urunler[a]);
+foreach(var sayi in sayilar) {
+    if(sayi == 20)
+        break;
+    Console.WriteLine(sayi);
 }
