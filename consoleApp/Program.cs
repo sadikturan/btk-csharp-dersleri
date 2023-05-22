@@ -1,34 +1,28 @@
-﻿// While Döngüsü Uygulama
+﻿// do-while döngüsü
 
-// Sayı Tahmin
-// 1-100 arasında rastgele tutulan bir sayıyı buldurmaya çalışın.
-// Tanımlanan hak bittiğinde oyun bitmeli.
+// int i = 1;
 
-var rnd = new Random();
-int tutulan = rnd.Next(1, 100);
-int hak = 3;
+// do {
+//     Console.WriteLine(i);
+//     i++;
+// } while(false);
 
-while(hak > 0) {
-    Console.WriteLine(tutulan);
+Console.Write("adet: ");
+int adet = Convert.ToInt32(Console.ReadLine());
 
-    Console.Write("sayı: ");
-    int sayi = Convert.ToInt32(Console.ReadLine());
+string[] urunler = new string[adet];
 
-    hak--;
+int i = 0;
 
-    if(sayi == tutulan) {
-        Console.WriteLine("tebrikler bildiniz");
-        break;
-    } 
-    else {
-        if(hak == 0) {
-            Console.WriteLine("oyun bitti");
-            break;
-        }
-        if(tutulan > sayi) {
-            Console.WriteLine("yukarı");
-        } else {
-            Console.WriteLine("aşağı");
-        }
-    }
+do {
+    Console.Write("ürün adı: ");
+    urunler[i] = Console.ReadLine() ?? "";
+
+    i++;
+} while(adet != i);
+
+Console.WriteLine("ürünler listeleniyor...");
+
+for(var a = 0; a < urunler.Length; a++) {
+    Console.WriteLine(urunler[a]);
 }
