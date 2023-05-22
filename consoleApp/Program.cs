@@ -1,21 +1,34 @@
-﻿// break & continue
+﻿// While Döngüsü Uygulama
 
-// string isim = "Sadık Turan";
+// Sayı Tahmin
+// 1-100 arasında rastgele tutulan bir sayıyı buldurmaya çalışın.
+// Tanımlanan hak bittiğinde oyun bitmeli.
 
-// for(var i = 0; i < isim.Length; i++) {
-//     if(isim[i] == 'ı') 
-//         continue;
-    
-//     Console.WriteLine(isim[i]);
-// }
+var rnd = new Random();
+int tutulan = rnd.Next(1, 100);
+int hak = 3;
 
-// Console.WriteLine("döngü bitti");
+while(hak > 0) {
+    Console.WriteLine(tutulan);
 
-int x = 0;
+    Console.Write("sayı: ");
+    int sayi = Convert.ToInt32(Console.ReadLine());
 
-while(x < 5) {
-    x++;
-    if(x == 3) 
-        continue;
-    Console.WriteLine(x);
+    hak--;
+
+    if(sayi == tutulan) {
+        Console.WriteLine("tebrikler bildiniz");
+        break;
+    } 
+    else {
+        if(hak == 0) {
+            Console.WriteLine("oyun bitti");
+            break;
+        }
+        if(tutulan > sayi) {
+            Console.WriteLine("yukarı");
+        } else {
+            Console.WriteLine("aşağı");
+        }
+    }
 }
