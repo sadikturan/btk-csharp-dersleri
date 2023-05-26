@@ -1,19 +1,14 @@
-﻿// forEach
+﻿// StreamReader sr = File.OpenText("deneme.txt");
 
-string ad = "Ahmet";
+// var s = "";
 
-// for(var i = 0; i < ad.Length; i++) {
-//     Console.WriteLine(ad[i]);
+// while((s = sr.ReadLine()) != null) {
+//     Console.WriteLine(s);
 // }
 
-foreach(var harf in ad) {
-    Console.WriteLine(harf);
-}
 
-int[] sayilar = {10,20,40,45,50};
+// string sonuc = File.ReadAllText("deneme.txt");
+string[] sonuc = File.ReadAllLines("deneme.txt");
 
-foreach(var sayi in sayilar) {
-    if(sayi == 20)
-        break;
-    Console.WriteLine(sayi);
-}
+Console.WriteLine(sonuc[0]);
+Console.WriteLine(sonuc[2]);
