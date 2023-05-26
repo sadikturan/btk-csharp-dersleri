@@ -1,23 +1,18 @@
-﻿// using(StreamWriter sw = File.CreateText("deneme.txt")) {
-//     sw.WriteLine("Merhaba");
-//     sw.WriteLine("BTK");
-//     sw.WriteLine("Akademi");
+﻿// Directory.CreateDirectory("temp");
+// Directory.CreateDirectory("temp/deneme");
+// Directory.CreateDirectory("temp/deneme2");
+
+// if(Directory.Exists("temp/deneme2")) {
+//     Directory.Delete("temp/deneme2");
+// } else {
+//     Console.WriteLine("silmek istediğiniz klasör yok");
 // }
 
-// using(StreamWriter sw = File.AppendText("deneme.txt")) {
-//     sw.WriteLine("Selam");
-//     sw.WriteLine("BTK");
-//     sw.WriteLine("Akademi");
-// }
 
-File.WriteAllText("deneme.txt", "merhaba");
-File.AppendAllText("deneme.txt", "merhaba");
+// string path = @"C:\temp";
+// string path = "/Users/sadikturan/Desktop/temp/deneme";
+string path = Directory.GetCurrentDirectory() + "/temp";
 
-using(StreamReader sr = File.OpenText("deneme.txt")) {
-    var s = "";
+Console.WriteLine(path);
 
-    while((s = sr.ReadLine()) != null) {
-        Console.WriteLine(s);
-    }
-}
-
+Directory.CreateDirectory(path);
