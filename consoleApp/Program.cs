@@ -1,33 +1,18 @@
-﻿// string path = @"C:\temp";
-// string path = "/Users/sadikturan/Desktop/temp/deneme";
+﻿using System;
+using System.IO;
 
-string rootPath = Directory.GetCurrentDirectory();
+namespace ConsoleApp {
 
-// string[] dirs = Directory.GetDirectories(rootPath, "*", SearchOption.AllDirectories);
+    class Program {
+        static void Main(string[] args) {
 
-// foreach(var dir in dirs) {
-//     Console.WriteLine(dir);
-// }
+            Console.WriteLine("Merhaba BTK");
 
-string source_path = "/Users/sadikturan/Desktop/ConsoleApp/img";
-string dest_path = "/Users/sadikturan/Desktop/ConsoleApp/images/";
-
-string[] files = Directory.GetFiles(source_path, "*", SearchOption.AllDirectories);
-
-foreach(var file in files) {
-    Console.WriteLine(file);
-    Console.WriteLine(Path.GetExtension(file));
-    Console.WriteLine(Path.GetFileNameWithoutExtension(file));
-    Console.WriteLine(Path.GetFileName(file));
-
-    var info = new FileInfo(file);
-    Console.WriteLine($"{Path.GetFileName(file)}: {info.Length}");
-
-    if(!Directory.Exists(dest_path)) {
-        Directory.CreateDirectory(dest_path);
+        }
     }
 
-    string name = Path.GetRandomFileName() + Path.GetExtension(file);
-    
-    File.Copy(file, $"{dest_path}{name}");
+    class Ogrenci {
+
+    }
+
 }
