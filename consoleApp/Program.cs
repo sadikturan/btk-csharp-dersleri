@@ -6,30 +6,15 @@ namespace ConsoleApp {
 
         static void Main(string[] args) {
 
-            // class => object (ogr1, ogr2)
-            Ogrenci ogr1 = new Ogrenci();
-            ogr1.OgrenciNo = "100";
-            ogr1.AdSoyad = "Ada Bilgi";
-            ogr1.Sube = "6/A";
+            Ogrenci ogr1 = new Ogrenci() { OgrenciNo = "100", AdSoyad = "Ada Bilgi", Sube = "6/A" };
+            Ogrenci ogr2 = new Ogrenci() { OgrenciNo = "200", AdSoyad = "Yiğit Bilgi", Sube = "7/A" };
+            Ogrenci ogr3 = new Ogrenci() { OgrenciNo = "300", AdSoyad = "Çınar Turan", Sube = "1/A" };
+            Ogrenci ogr4 = new Ogrenci() { OgrenciNo = "400", AdSoyad = "Ahmet Turan", Sube = "1/A" };
 
-            Ogrenci ogr2 = new Ogrenci();
-            ogr2.OgrenciNo = "200";
-            ogr2.AdSoyad = "Yiğit Bilgi";
-            ogr2.Sube = "7/A";
-
-            Ogrenci ogr3 = new Ogrenci();
-            ogr3.OgrenciNo = "300";
-            ogr3.AdSoyad = "Çınar Turan";
-            ogr3.Sube = "1/A";
-
-            Ogrenci[] ogrenciler = new Ogrenci[3];
-
-            ogrenciler[0] = ogr1;
-            ogrenciler[1] = ogr2;
-            ogrenciler[2] = ogr3;
+            Ogrenci[] ogrenciler = new Ogrenci[4] { ogr1, ogr2, ogr3, ogr4 };
 
             foreach(var ogrenci in ogrenciler) {
-                Console.WriteLine($"{ogrenci.OgrenciNo} numaralı öğrencinin adı {ogrenci.AdSoyad} ve şubesi {ogrenci.Sube}");
+                Console.WriteLine(ogrenci.BilgileriYazdir());
             }
         }
     }
@@ -39,10 +24,13 @@ namespace ConsoleApp {
         public string OgrenciNo { get; set; }
         public string AdSoyad { get; set; }
         public string Sube { get; set; }
+
+        // methods
+        public string BilgileriYazdir() 
+        {
+            return $"{this.OgrenciNo} numaralı öğrencinin adı {this.AdSoyad} ve şubesi {this.Sube}";
+        }
     }
 
 }
 
-// ConsoleApp => Program, Ogrenci
-// System => Console
-// System.IO => File, Directory, Path
