@@ -4,31 +4,58 @@ namespace ConsoleApp {
 
     class Program {
 
-        static void Main(string[] args) {
+        static void Main(string[] args) 
+        {
+            var soru1 = new Soru() { 
+                SoruMetni = "Hangisi programlama dili değildir?",
+                Secenekler = new string[4] { "Python", "C#", "Java", "Html" },
+                Cevap = "Html" 
+            };
 
-            Ogrenci ogr1 = new Ogrenci() { OgrenciNo = "100", AdSoyad = "Ada Bilgi", Sube = "6/A" };
-            Ogrenci ogr2 = new Ogrenci() { OgrenciNo = "200", AdSoyad = "Yiğit Bilgi", Sube = "7/A" };
-            Ogrenci ogr3 = new Ogrenci() { OgrenciNo = "300", AdSoyad = "Çınar Turan", Sube = "1/A" };
-            Ogrenci ogr4 = new Ogrenci() { OgrenciNo = "400", AdSoyad = "Ahmet Turan", Sube = "1/A" };
+            var soru2 = new Soru() { 
+                SoruMetni = "Hangisi en popüler programlama dilidir ?",
+                Secenekler = new string[4] { "Python", "C#", "Java", "Html" },
+                Cevap = "C#" 
+            };
 
-            Ogrenci[] ogrenciler = new Ogrenci[4] { ogr1, ogr2, ogr3, ogr4 };
+            var soru3 = new Soru() { 
+                SoruMetni = "Hangisi web programlama platformu değildir ?",
+                Secenekler = new string[4] { "Django", "Asp.net", "Spring", "Python" },
+                Cevap = "Python" 
+            };
 
-            foreach(var ogrenci in ogrenciler) {
-                Console.WriteLine(ogrenci.BilgileriYazdir());
+            var sorular = new Soru[] { soru1, soru2, soru3 };
+
+            foreach (var soru in sorular)
+            {
+                Console.WriteLine(soru.SoruMetni);
+                foreach(var secenek in soru.Secenekler) {
+                    Console.WriteLine(secenek);
+                }
+
+                // kullanıcıdan cevap alalım.
+                Console.Write("cevabınız: ");
+                var cevap =  Console.ReadLine();
+
+                if(soru.cevapKontrol(cevap)) {
+                    Console.WriteLine("doğru");
+                } else {
+                    Console.WriteLine("yanlış");
+                }
             }
         }
     }
 
-    class Ogrenci {
-        // property 
-        public string OgrenciNo { get; set; }
-        public string AdSoyad { get; set; }
-        public string Sube { get; set; }
-
+    class Soru {
+        // properties
+        public string SoruMetni { get; set; }
+        public string[] Secenekler { get; set; }
+        public string Cevap { get; set; }
+        
         // methods
-        public string BilgileriYazdir() 
+        public bool cevapKontrol(string cevap) 
         {
-            return $"{this.OgrenciNo} numaralı öğrencinin adı {this.AdSoyad} ve şubesi {this.Sube}";
+            return this.Cevap.ToLower() == cevap.ToLower();
         }
     }
 
