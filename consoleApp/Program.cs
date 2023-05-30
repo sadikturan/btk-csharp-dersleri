@@ -7,40 +7,45 @@ namespace ConsoleApp {
 
         static void Main(string[] args) 
         {
-            // Generic List
+            // Dictionary
 
-            List<int> sayilar = new List<int>();
+            // Key-Value => plaka - şehir
 
-            sayilar.Add(10);
-            sayilar.Add(20);
+            Dictionary<int,string> plakalar = new Dictionary<int, string>();
 
-            List<string> isimler = new List<string>() { "ali","ahmet","ayşe" };         
-           
-           List<Product> urunler = new List<Product>();
+            plakalar.Add(41, "Kocaeli");
+            plakalar.Add(34, "İstanbul");
+            plakalar.Add(53, "Rize");
 
-           urunler.Add(new Product() { Id=1, Title="IPhone 14", Price=40000 });
-           urunler.Add(new Product() { Id=2, Title="IPhone 15", Price=50000 });
-           urunler.Add(new Product() { Id=3, Title="IPhone 16", Price=60000 });
+            Dictionary<int,string> sayilar = new Dictionary<int, string>() 
+            {
+                {1, "Bir"},
+                {2, "İki"},
+                {3, "Üç"}
+            };
 
-           urunler.Insert(urunler.Count, new Product() { Id=4, Title="IPhone 17", Price=70000 });
+            Console.WriteLine(plakalar[41]);
 
-        //    urunler.RemoveAt(2);
-        //    urunler.Remove(urunler[0]);
+            if(plakalar.ContainsKey(34)) {
+                Console.WriteLine(plakalar[34]);
+            }
 
-           foreach(var urun in urunler)
-           {
-            Console.WriteLine(urun.Title + " " + urun.Price);
-           }
+            foreach(KeyValuePair<int, string> plaka in plakalar)
+            {
+                Console.WriteLine(plaka.Key + " " + plaka.Value);
+            }
+
+            // update
+            sayilar[1] = "one";
+            // sayilar.Remove(1);
+            // sayilar.Clear();
+
+            Console.WriteLine(sayilar[1]);
 
         }
     }
 
-    class Product 
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public double Price { get; set; }
-    }
+  
     
 }
 
