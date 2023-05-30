@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace ConsoleApp {
 
@@ -7,54 +7,40 @@ namespace ConsoleApp {
 
         static void Main(string[] args) 
         {
-            // ArrayList
+            // Generic List
 
-            // non-generic => object
-            // dinamik
+            List<int> sayilar = new List<int>();
 
-            ArrayList liste = new ArrayList();
+            sayilar.Add(10);
+            sayilar.Add(20);
 
-            liste.Add(10);
-            liste.Add("10");
-            liste.Add("ali");
-            liste.Add(null);
-            liste.Add(true);
+            List<string> isimler = new List<string>() { "ali","ahmet","ayşe" };         
+           
+           List<Product> urunler = new List<Product>();
 
-            var liste2 = new ArrayList() {
-                5,
-                "ahmet",
-                false,
-                4.5,
-                null
-            };
+           urunler.Add(new Product() { Id=1, Title="IPhone 14", Price=40000 });
+           urunler.Add(new Product() { Id=2, Title="IPhone 15", Price=50000 });
+           urunler.Add(new Product() { Id=3, Title="IPhone 16", Price=60000 });
 
-            int[] sayilar = {10,20,30};
-            
-            liste.AddRange(sayilar);
+           urunler.Insert(urunler.Count, new Product() { Id=4, Title="IPhone 17", Price=70000 });
 
-            var eleman = (int)liste[0];
-            var isim = liste[2].ToString();
+        //    urunler.RemoveAt(2);
+        //    urunler.Remove(urunler[0]);
 
-            // insert
-            liste.Insert(1, "sadık");
-            liste.InsertRange(2, liste2);
+           foreach(var urun in urunler)
+           {
+            Console.WriteLine(urun.Title + " " + urun.Price);
+           }
 
-            // remove
-            liste.Remove(10);
-            liste.RemoveAt(2);
-            liste.RemoveRange(2, 3);
-
-            // contains, indexOf
-            Console.WriteLine(liste.Contains(100));
-            Console.WriteLine(liste.IndexOf(10));
-
-            // foreach (var item in liste)
-            // {
-            //     Console.WriteLine(item);
-            // } 
         }
     }
 
+    class Product 
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public double Price { get; set; }
+    }
     
 }
 
