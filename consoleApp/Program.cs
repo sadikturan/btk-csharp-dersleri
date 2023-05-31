@@ -12,25 +12,31 @@ namespace ConsoleApp {
             // System.DivideByZeroException
             // System.NullReferenceException
 
-            Console.Write("1. sayı: ");
-            int sayi1 = Convert.ToInt32(Console.ReadLine());
+            try {
+                Console.Write("1. sayı: ");
+                int sayi1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("2. sayı: ");
-            int sayi2 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("2. sayı: ");
+                int sayi2 = Convert.ToInt32(Console.ReadLine()); // TryParse
 
-            var sonuc = sayi1 / sayi2;
+                var sonuc = sayi1 / sayi2;
 
-            Urun urun = null;
-            Console.WriteLine(urun.UrunAdi);
-            
+                Console.WriteLine(sonuc);
+            }
+            catch(FormatException) {
+                Console.WriteLine("sayısal bilgileri düzgün giriniz");
+            }
+            catch(DivideByZeroException) {
+                Console.WriteLine("sayı 2 sıfır olmamalıdır.");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("bir hata oluştu");
+                Console.WriteLine(ex.Message);
+            }
             // Exception Handling
         }
     }
-
-    class Urun
-    {
-        public string UrunAdi { get; set; }
-    } 
     
 }
 
