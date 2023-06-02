@@ -1,40 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleApp {
 
     class Program {
 
+        static void parola_kontrol(string password)
+        {
+            if(password.Length < 6 || password.Length >10)
+            {
+                throw new Exception("parola 6-10 karakter aralığında olmalıdır.");
+            }
+
+            if(!password.Any(char.IsDigit))
+            {
+                throw new Exception("parola en az bir rakam içermelidir.");
+            }
+
+            if(!password.Any(char.IsLetter))
+            {
+                throw new Exception("parola en az bir harf içermelidir.");
+            }
+        }        
+
         static void Main(string[] args) 
         {
-            // Exception
-            // System.FormatException
-            // System.DivideByZeroException
-            // System.NullReferenceException
+            Console.Write("parola: ");
+            string parola = Console.ReadLine();
 
-            try {
-                Console.Write("1. sayı: ");
-                int sayi1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("2. sayı: ");
-                int sayi2 = Convert.ToInt32(Console.ReadLine()); // TryParse
-
-                var sonuc = sayi1 / sayi2;
-
-                Console.WriteLine(sonuc);
+            try{
+                parola_kontrol(parola);
+                Console.WriteLine("parola geçerli");
             }
-            catch(FormatException) {
-                Console.WriteLine("sayısal bilgileri düzgün giriniz");
-            }
-            catch(DivideByZeroException) {
-                Console.WriteLine("sayı 2 sıfır olmamalıdır.");
-            }
-            catch(Exception ex)
+            catch(Exception e)
             {
-                Console.WriteLine("bir hata oluştu");
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(e.Message);
             }
-            // Exception Handling
+
+            
         }
     }
     
